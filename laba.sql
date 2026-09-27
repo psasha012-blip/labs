@@ -80,7 +80,7 @@ VALUES
     (5, 4, '978-5-389-03713-7', '2026-09-10', '2026-09-24', NULL),
     (6, 2, '978-5-17-118366-8', '2026-07-01', '2026-07-15', '2026-07-14');
 
--- Задание 4
+-- Практика 3-5
 
 UPDATE Readers
 SET Phone = '79009999999'
@@ -97,6 +97,8 @@ DELETE FROM Readers
 WHERE Card_number = 5;
 
 DELETE FROM Readers
+
+-- Практика 7
 
 SELECT *
 FROM Readers;
