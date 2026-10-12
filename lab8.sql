@@ -73,8 +73,11 @@ INSERT INTO Order_Items (order_id, product_id, quantity, price_per_unit) VALUES
 (4, 5, 1, 4500.00);   -- и Фен
 
 SELECT c.full_name, o.order_date FROM Customers c INNER JOIN Orders o ON c.customer_id = o.customer_id; -- 1 задание
+
 SELECT c.full_name FROM Customers c LEFT JOIN Orders o ON c.customer_id = o.customer_id WHERE o.order_id IS NULL; -- 2 задание
+
 SELECT p.product_name, oi.quantity, oi.price_per_unit FROM Order_Items oi INNER JOIN Products p ON oi.product_id = p.product_id WHERE oi.order_id = 1; -- 3 задание
+
 SELECT full_name FROM Customers WHERE customer_id IN (-- 4 задание
     SELECT o.customer_id 
     FROM Orders o
@@ -117,6 +120,7 @@ FROM Products p
 LEFT JOIN Order_Items oi
     ON p.product_id = oi.product_id
 WHERE oi.order_item_id IS NULL;
+
 SELECT c.full_name AS customer_name, p.product_name, oi.quantity -- 9 задание
 FROM Customers AS c
 FULL OUTER JOIN Orders AS o 
@@ -125,6 +129,7 @@ FULL OUTER JOIN Order_Items AS oi
 ON o.order_id = oi.order_id
 FULL OUTER JOIN Products AS p 
 ON oi.product_id = p.product_id;
+
 SELECT DISTINCT c.full_name -- 10 задание join с подзапросом
 FROM Customers AS c
 JOIN Orders AS o 
