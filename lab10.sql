@@ -4,12 +4,10 @@ CREATE TABLE Projects (
     project_name VARCHAR(255)
 );
 
-
 CREATE TABLE Employees (
     employee_id INT PRIMARY KEY,
     employee_name VARCHAR(255)
 );
-
 
 CREATE TABLE ProjectEmployees (
     project_id INT,
@@ -21,20 +19,16 @@ CREATE TABLE ProjectEmployees (
 );
 
 -- 2
-
-
 CREATE TABLE Clients (
     client_id INT PRIMARY KEY,
     client_name VARCHAR(255),
     client_email VARCHAR(255)
 );
 
-
 CREATE TABLE Equipment (
     equipment_id INT PRIMARY KEY,
     equipment_name VARCHAR(255)
 );
-
 
 CREATE TABLE EquipmentRentals (
     client_id INT,
@@ -47,7 +41,6 @@ CREATE TABLE EquipmentRentals (
 );
 
 -- 3 
-
 CREATE TABLE Students ( 
     student_id INT PRIMARY KEY,
     student_name VARCHAR(255) 
